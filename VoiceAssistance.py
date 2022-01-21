@@ -1,4 +1,3 @@
-print("\nI am working......")
 
 import os
 import speech_recognition as sr
