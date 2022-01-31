@@ -114,9 +114,10 @@ if __name__ == '__main__':
 			break
 
 		# Fetching information from wikipedia
-		elif 'wikipedia'in statement or 'what is'in statement:
+		elif 'wikipedia'in statement or 'what is'in statement or 'who is'in statement:
 			statement = statement.replace("wikipedia", "")
 			statement = statement.replace("what is", "")
+			statement = statement.replace("who is", "")
 			print(statement)
 
 			results = wikipedia.summary(statement, sentences = 2)  
