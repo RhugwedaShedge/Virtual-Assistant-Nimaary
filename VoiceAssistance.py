@@ -153,6 +153,22 @@ if __name__ == '__main__':
 			speak("Is there something else for me?")
 
 		
+		# Getting today's date
+		elif 'date' in statement:
+			strDate = datetime.datetime.now()
+			speak(f"Today's date is {strDate.strftime('%d')} {strDate.strftime('%B')} {strDate.year}")
+			print(f"Today's date is {strDate.strftime('%d')} {strDate.strftime('%B')} {strDate.year}")
+			speak("Is there something else for me?")
+
+
+		# Getting today's day
+		elif 'day' in statement:
+			strDay = datetime.datetime.now()
+			speak(f"Today is {strDay.strftime('%A')}")
+			print(f"Today is {strDay.strftime('%A')}")
+			speak("Is there something else for me?")
+
+		
 		elif 'news' in statement:
              
 			try:
@@ -273,7 +289,7 @@ if __name__ == '__main__':
 			speak("I am fine, Thank you!")
 			speak("How are you? , " + user_name)
  
-		elif 'fine' in statement or "good" in statement or "great" in statement:
+		elif 'fine' in statement or "I am good" in statement or "great" in statement:
 			speak("It's good to know that")
 
 		elif 'you are very' in statement or "you are awesome" in statement or "you are cute" in statement or "you are smart" in statement:
